@@ -1,9 +1,11 @@
 #!/bin/sh
 
 if [ $# -eq 4]
-then 
+then
+
 mkdir $3
 find $1 -name "*.$2" -ok cp -backup=numbered {} ./$3 \;
 tar -zcf $4 ./$3
 echo "done"
+
 fi
